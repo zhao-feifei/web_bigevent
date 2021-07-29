@@ -27,22 +27,12 @@ function getUserInfo() {
     //   Authorization: localStorage.getItem("token") || "",
     // },
     success: function (res) {
+      console.log(res);
       if (res.status !== 0) {
         return layui.layer.msg("获取用户信息失败!");
       }
       //调用渲染头像的函数
       renderAvatar(res.data);
-    },
-    complete: function (res) {
-      //判断服务器返回的信息是否符合页面跳转的前提
-      if (
-        res.responseJSON.status === 1 &&
-        res.responseJSON.message === "身份认证失败！"
-      ) {
-        //清空token并且跳转到登录页面
-        localStorage.removeItem("token");
-        location.href = "/login.html";
-      }
     },
   });
 }
@@ -54,7 +44,7 @@ function renderAvatar(user) {
   //设置欢迎文本
   $("#welcome").html("欢迎&nbsp;&nbsp" + name);
   //渲染用户头像或者文本头像
-  if (user.user_pic != null) {
+  if (user.user_pic !== null) {
     $(".layui-nav-img").attr("src", user.user_pic).show();
     $(".text-avatar").hide();
   } else {

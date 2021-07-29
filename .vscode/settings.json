@@ -1,3 +1,11 @@
 {
-  "cSpell.words": ["Prefilter", "layui", "repassword", "repwd", "userinfo"]
+  "cSpell.words": [
+    "Prefilter",
+    "layui",
+    "reguser",
+    "repassword",
+    "repwd",
+    "samepwd",
+    "userinfo"
+  ]
 }
