@@ -1,11 +1,13 @@
 {
   "cSpell.words": [
     "Prefilter",
+    "filelist",
     "layui",
     "reguser",
     "repassword",
     "repwd",
     "samepwd",
+    "updatepwd",
     "userinfo"
   ]
 }
