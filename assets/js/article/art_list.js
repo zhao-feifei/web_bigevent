@@ -103,7 +103,7 @@ $(function () {
   }
 
   //通过代理为删除按钮绑定事件
-  $("tbody").on("click", "btn-delete", function () {
+  $("tbody").on("click", ".btn-delete", function () {
     //获取删除按钮的个数
     var len = $(".btn-delete").length;
     //获取到文章的ID
